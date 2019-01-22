@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class amarraStatus : MonoBehaviour {
+public class AmarraStatus : MonoBehaviour {
 
     public float resistence;
 
-    public enum Material{rope,tape,chain};
+    public enum Material{Corda,Fita,Corrente};
 
     public enum Instrument { Knife, Scissors, chain };
 

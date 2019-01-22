@@ -6,15 +6,20 @@ public class GulliverStatus : MonoBehaviour {
 
     public int energy;
 
-    public List<Item> inventory;
-
-
+    private int energyKeeped;
+    private GameObject commands;
 
 	// Use this for initialization
 	void Start () {
-		
+
+        energyKeeped = energy;
+       
 	}
 
+
+    void PegarItem() {
+        DoAction();
+    }
 
 
     void DoAction() {
@@ -25,6 +30,17 @@ public class GulliverStatus : MonoBehaviour {
         } else {
             energy -= 1;
         }
+    }
+
+    void Shake() {
+    }
+
+    void CortarCorda() {
+        DoAction();
+    }
+
+    void Dormir() {
+       
     }
 	
 	// Update is called once per frame
