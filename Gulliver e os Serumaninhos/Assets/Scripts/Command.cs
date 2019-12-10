@@ -21,16 +21,13 @@ public class Command : MonoBehaviour {
 
     public GameObject player;
 
-    private GameObject mainCamera;
-
    // Use this for initialization
    void Start () {
 
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         timeRemaining = PressTime;
         amountLoose = 0;
         player.GetComponent<Animator>().SetFloat("Direction", 0.5f);
-        timeToPressShake = false;
+        timeToPressShake = true;
     }
 
 	// Update is called once per frame
@@ -62,13 +59,11 @@ public class Command : MonoBehaviour {
                 timeToPressShake = false;
                 timeRemaining = PressTime;
                 Debug.Log("A corda está um pouco mais folgada, desse tanto: "+ amountLoose);
-                if (amountLoose >= 25){ amountLoose = 25; }
-                LooseTie(amountLoose);
-                amountLoose = 0;
             }
 
             if (getLeft & lastPressedIsLeft== false) {
-                amountLoose += 1;
+                GulliverStatus.instance.ShakingEnergy(2);
+                LooseTie(1);
                 player.GetComponent<Animator>().SetFloat("Direction", 0);
                 lastPressedIsLeft = true;
                 AButtonCanvas.GetComponent<RawImage>().texture = AButtonPressed;
@@ -93,7 +88,7 @@ public class Command : MonoBehaviour {
 
         for (int i = 0; i < objList.Length; i++) {
 
-            objList[i].LooseTies(amountLoose);
+            objList[i].LooseTiesShaking(amountLoose);
         }
 
 

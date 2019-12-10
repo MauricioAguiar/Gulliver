@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212737291541144844}
   - component: {fileID: 114208679815887594}
   - component: {fileID: 61841623252382810}
+  - component: {fileID: 114621315907187664}
   m_Layer: 0
   m_Name: Amarras
-  m_TagString: Item
+  m_TagString: Amarra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1953927975789108}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.34, y: 0.84, z: 0}
+  m_LocalPosition: {x: -0.438, y: -0.398, z: 0}
   m_LocalScale: {x: 0.26537383, y: 0.3628385, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,7 +52,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -82,6 +83,22 @@ MonoBehaviour:
   selectedMaterial: 0
   cuttedByKnife: 0
   cuttedByScissors: 0
+--- !u!114 &114621315907187664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953927975789108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1792225368ec3b42ab95768a0ae34ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 32
+  ObjectName: 
+  ObjectInfo: 
+  textName: {fileID: 0}
+  textInfo: {fileID: 0}
 --- !u!212 &212737291541144844
 SpriteRenderer:
   m_ObjectHideFlags: 1

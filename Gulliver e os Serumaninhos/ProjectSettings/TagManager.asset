@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Item
   - ItemManager
+  - Amarra
+  - TooltipLeft
+  - TooltipRight
+  - TNameLeft
+  - TTextLeft
+  - TNameRight
+  - TTextRight
   layers:
   - Default
   - TransparentFX

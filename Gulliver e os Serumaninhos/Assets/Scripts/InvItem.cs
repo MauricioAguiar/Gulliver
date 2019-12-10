@@ -2,13 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [CreateAssetMenu]
-public class Item : ScriptableObject {
+public class InvItem : ScriptableObject {
 
-
-    public Texture itemIcon;
-
-    public string itemType;
-
+    public string itemName;
+    public Sprite Icon;
 }

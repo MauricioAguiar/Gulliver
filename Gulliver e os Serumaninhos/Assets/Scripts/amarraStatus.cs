@@ -14,17 +14,21 @@ public class AmarraStatus : MonoBehaviour {
 
     public bool cuttedByKnife, cuttedByScissors;
 
-	// Use this for initialization
-	void Start () {	
 
-	}
-	
 	// Update is called once per frame
 	void Update () {
 		if (resistence <= 0) {
             Destroy(gameObject);
         }
 	}
+
+    public void LooseTiesShaking(float amount) {
+        if(resistence <= 25) {
+            Debug.Log("Acho que não folga mais que isso preciso arrumar outro jeito");
+        } else {
+            resistence -= amount;
+        }
+    }
 
     public void LooseTies(float amount) {
 
